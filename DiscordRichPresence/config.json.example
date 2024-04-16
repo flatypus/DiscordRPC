@@ -1,0 +1,10 @@
+{
+  "clientID": 1234567890,
+  "state": "Doing something fun",
+  "details": "An important detail",
+  "start": 5,
+  "largeImage": "",
+  "largeText": "",
+  "smallImage": "",
+  "smallText": ""
+}

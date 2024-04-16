@@ -1,0 +1,4 @@
+{
+  "dotnet.defaultSolution": "DiscordRichPresence.sln",
+  "cmake.configureOnOpen": false
+}
