@@ -51,6 +51,7 @@ class DiscordActivityUpdater
         while (true)
         {
             SetActivity();
+            discord.RunCallbacks();
             Task.Delay(1000).Wait();
         }
     }
@@ -58,10 +59,7 @@ class DiscordActivityUpdater
     void SetActivity()
     {
         var config = configReader.readConfig();
-        Console.WriteLine("Setting activity");
-        Console.WriteLine(config.state);
         var startTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
-
         var activity = new Activity
         {
             State = config.state,
@@ -95,6 +93,6 @@ class Program
 {
     public static void Main()
     {
-        DiscordActivityUpdater discordActivityUpdater = new DiscordActivityUpdater();
+        new DiscordActivityUpdater();
     }
 }
